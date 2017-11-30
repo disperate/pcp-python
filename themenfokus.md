@@ -15,14 +15,16 @@ variable = 'hello'
 ```
 ### yield-Anweisung & Generatoren (Coroutinen)
 ```python
-def generator_function():
-    for i in range(10):
-        yield i
+# a generator that yields items instead of returning a list
+def firstn(n):
+  num = 0
+  while num < n:
+    yield num
+    num += 1
 
-for item in generator_function():
-    print(item)
+sum_of_first_n = sum(firstn(1000000))
 ```
-
+Inspired by [https://wiki.python.org/moin/Generators](https://wiki.python.org/moin/Generators)
 ### List comprehension
 
 ### Decorators
