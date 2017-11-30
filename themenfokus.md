@@ -1,15 +1,19 @@
-# Themenliste 
+# Themenliste
 
-### Einführung 
+### Einführung
 
-- Python 2.X & Python 3.X 
-- Monty Python's Flying Circus 
+- Python 2.X & Python 3.X
+- Monty Python's Flying Circus
 
-### Einrückung (Indentation) 
+### Einrückung (Indentation)
 
-### Typisierung & Duck Typing 
-
-### yield-Anweisung & Generatoren (Coroutinen) 
+### Typisierung & Duck Typing
+```python
+# Python is dynamically but strongly typed.
+variable = 3
+variable = 'hello'
+```
+### yield-Anweisung & Generatoren (Coroutinen)
 ```python
 def generator_function():
     for i in range(10):
@@ -17,14 +21,10 @@ def generator_function():
 
 for item in generator_function():
     print(item)
-
 ```
- 
 
-### List comprehension 
+### List comprehension
 
-### Decorators 
+### Decorators
 
-### Function caching 
-
- 
+### Function caching
