@@ -56,6 +56,8 @@ M = [x for x in S if x % 2 == 0]
 > [0, 4, 16, 36, 64]
 ```
 ### Decorators
+
+```python
 # in python functions are higher-order function
 # they can be a parameter
 
@@ -72,13 +74,26 @@ def time_messuring(some_function):
     return wrapper
 
 @time_messuring
-def sleepTime():
+def sleep_time():
     time.sleep(0.1)
     print("Wheee!")
 
-# sleepTime = time_messuring(sleepTime)
+# sleep_time = time_messuring(sleep_time)
 
-sleepTime()
+sleep_time()
+```
+Real world example from [Flask]([http://flask.pocoo.org/]), a popular python web framework.
+
+```python
+@app.route('/grade', methods=['POST'])
+@login_required
+@validate_json('student_id')
+def update_grade():
+    json_data = request.get_json()
+    print(json_data)
+    [...]
+```
+
 ### Function caching
 
 ```python

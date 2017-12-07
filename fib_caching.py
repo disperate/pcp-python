@@ -5,7 +5,7 @@ from functools import lru_cache
 
 
 # maxsize defines how many recent return values to cache.
-@lru_cache(maxsize=2)
+@lru_cache(maxsize=3)
 def fib(n):
     if n < 2:
         return n
