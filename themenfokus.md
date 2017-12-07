@@ -6,13 +6,32 @@
 - Monty Python's Flying Circus
 
 ### Einrückung (Indentation)
+Spaces are the preferred indentation method.  
+Tabs should be used solely to remain consistent with code that is already indented with tabs.  
+Python 3 disallows mixing the use of tabs and spaces for indentation.
 
+![Linksvstabs](http://meh.schizofreni.co/img/tabs-spaces-both.png)
 ### Typisierung & Duck Typing
+Python is dynamically but strongly typed.
 ```python
-# Python is dynamically but strongly typed.
 variable = 3
+type(variable)
 variable = 'hello'
+type(variable)
 ```
+
+```python
+number = 3
+numberString = '3'
+
+## print(number + numberString)
+## TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+print(number + int(numberString))
+print(str(number) + numberString)
+```
+
+
 ### yield-Anweisung & Generatoren (Coroutinen)
 ```python
 # a generator that yields items instead of returning a list
