@@ -56,7 +56,29 @@ M = [x for x in S if x % 2 == 0]
 > [0, 4, 16, 36, 64]
 ```
 ### Decorators
+# in python functions are higher-order function
+# they can be a parameter
 
+import time
+
+def time_messuring(some_function):
+
+    def wrapper():
+        t1 = time.time()
+        some_function()
+        t2 = time.time()
+        print(some_function.__name__ + " took " + str((t2 - t1)) + " seconds" + "\n")
+
+    return wrapper
+
+@time_messuring
+def sleepTime():
+    time.sleep(0.1)
+    print("Wheee!")
+
+# sleepTime = time_messuring(sleepTime)
+
+sleepTime()
 ### Function caching
 
 ```python
