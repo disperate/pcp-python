@@ -14,3 +14,8 @@ def printNumberAndSquareV2(myList):
 l = [1, 2, 3, 5, 8]
 printNumberAndSquare(l)
 printNumberAndSquareV2(l)
+
+V = [2**i for i in range(13)]
+print(V)
+M = [x for x in range(50) if x % 2 == 0]
+print(M)
